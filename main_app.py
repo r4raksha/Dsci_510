@@ -96,7 +96,7 @@ elif tabs == 'Data and visualizations':
     fig = px.scatter(
         df, 
         x="Year", 
-        y="Revenue")
+        y="Interest Rate")
     fig.show()
 
     tab1, tab2 = st.tabs(["Scatter Plot of American Tower Revenue from 2009 - 2021", "Graph Description"])
