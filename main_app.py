@@ -49,12 +49,6 @@ elif tabs == 'Data and visualizations':
         st.subheader('Filtered Data')
         st.write(filtered_df)
 
-    tab1, tab2 = st.columns(2)
-    with tab1:
-        st.altair_chart(chart, use_container_width=True)
-    with tab2:
-        st.markdown("This visualization shows how Consumer Price Index is around the same range throughout each month. My follow-up question to this was observing the years and seeing overall impact during the recession years.")
-
     fig = px.scatter(
         df,
         x="Year",
