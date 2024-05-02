@@ -50,7 +50,7 @@ elif tabs == 'Data and visualizations':
         st.write(filtered_df)
 
     chart = alt.Chart(df).mark_circle().encode(
-        x='Month',
+        x='Year',
         y='CPI',
     ).interactive()
 
@@ -74,5 +74,8 @@ elif tabs == 'Data and visualizations':
         st.plotly_chart(fig, theme="streamlit", use_container_width=True)
     with tab2:
         st.markdown("Graph Description")
+
+    fig = px.line(filtered_df, x='Year', y='lifeExp', color='country', markers=True)
+    fig.show()
 
     
