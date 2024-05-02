@@ -54,13 +54,12 @@ elif tabs == 'Data and visualizations':
         y='CPI',
     ).interactive()
 
-    tab1, tab2 = st.columns(2)
+    tab1, tab2 = st.tabs(["CPI over the Years", "Graph Description"])
     with tab1:
-        st.markdown("This visualization shows how Consumer Price Index is around the same range throughout each month. My follow-up question to this was observing the years and seeing overall impact during the recession years.")
-    with tab2:
-        # Use the native Altair theme.
         st.altair_chart(chart, theme=None, use_container_width=True)
-        
+    with tab2:
+        st.markdown("This visualization shows how Consumer Price Index is around the same range throughout each month. My follow-up question to this was observing the years and seeing overall impact during the recession years.")
+
     fig = px.scatter(
         df,
         x="Year",
@@ -70,10 +69,10 @@ elif tabs == 'Data and visualizations':
         size_max=20,
     )
 
-tab1, tab2 = st.tabs(["Streamlit theme (default)", "Plotly native theme"])
-with tab1:
-    # Use the Streamlit theme.
-    # This is the default. So you can also omit the theme argument.
-    st.plotly_chart(fig, theme="streamlit", use_container_width=True)
+    tab1, tab2 = st.tabs(["Plotting CPI, Interest Rate, Month, and Year", "Graph Description"])
+    with tab1:
+        st.plotly_chart(fig, theme="streamlit", use_container_width=True)
+    with tab2:
+        st.markdown("Graph Description")
 
     
