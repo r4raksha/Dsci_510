@@ -23,11 +23,15 @@ if tabs == 'Introduction':
     st.markdown("\t    II. The second page contains more in-depth reflection questions which have a few explanations as to what I discovered, challenges, skills I wish I had for the project, and future direction and steps.")
     st.markdown("\t   III. Next, on the Dataframe page, I listed all three sources and described how I acquired the datasets for my project, from web scraping the FRED website to utilizing the stock market and interest rate API’s.")
     st.markdown("\t    IV. The final page shows each visualization I’ve made and their interactivity from the datasets!")
+
+    st.markdown("**Plots/Charts**")
+    st.markdown("**Conclusions**")
+    st.markdonw("**Major Gotchas**")
     
 elif tabs == 'Research Questions':
     st.title("Research Questions")
     st.write('This is the Research Questions tab.')
-elif tabs == 'Data Sources':
+elif tabs == 'Data Sources': 
     st.title("Data Sources")
     st.write('This is the Data Sources tab.')
 elif tabs == 'Data and visualizations':
@@ -63,5 +67,21 @@ elif tabs == 'Data and visualizations':
         st.plotly_chart(fig, use_container_width=True)
     with tab2:
         st.markdown("Graph Description")
+    
+    fig = px.line(
+        df, 
+        x='Year', 
+        y='Revenue', 
+        color='Month', 
+        markers=True)
+    fig.show()
+    
+    tab1, tab2 = st.tabs(["Line Graph of Stock Performance", "Graph Description"])
+    with tab1:
+        st.plotly_chart(fig, use_container_width=True)
+    with tab2:
+        st.markdown("Graph Description")
+
+    
 
     
