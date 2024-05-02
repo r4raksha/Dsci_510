@@ -64,7 +64,7 @@ elif tabs == 'Data and visualizations':
 
     tab1, tab2 = st.tabs(["CPI (Consumer Price Index) over the Years", "Graph Description"])
     with tab1:
-        st.altair_chart(chart, use_container_width=True)
+        st.altair_chart(chart, theme = None, use_container_width=True)
     with tab2:
         st.markdown("This visualization shows how Consumer Price Index is around the same range throughout each month. My follow-up question to this was observing the years and seeing overall impact during the recession years.")
 
