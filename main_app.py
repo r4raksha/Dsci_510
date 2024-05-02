@@ -27,9 +27,14 @@ elif tabs == 'Data and visualizations':
     st.write('This is the Data Visualization tab.')
     start_year = st.sidebar.selectbox('Select Start Year', df['Year'].unique())
     end_year = st.sidebar.selectbox('Select End Year', df['Year'].unique())
+    start_month = st.sidebar.selectbox('Select Start Month', df['Month'].unique())
+    end_month = st.sidebar.selectbox('Select End Month', df['Month'].unique())
     show_data = st.sidebar.checkbox('Show Data')
     # Filter data based on user selection
-    filtered_df = df[(df['Year'] >= start_year) & (df['Year'] <= end_year)]
+    filtered_df = df[
+        (df['Year'] >= start_year) & (df['Year'] <= end_year) & 
+        (df['Month'] >= start_month) & (df['Month'] <= end_month)
+    ]
 
     # Display filtered data if checkbox is selected
     if show_data:
