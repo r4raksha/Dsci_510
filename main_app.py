@@ -50,7 +50,7 @@ elif tabs == 'Data and visualizations':
 
     chart = alt.Chart(df).mark_circle().encode(
         x='Month',
-        y='Interest Rate',
+        y='CPI',
     ).interactive()
 
     tab1, tab2 = st.columns(2)
