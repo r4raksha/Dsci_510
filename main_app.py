@@ -96,8 +96,7 @@ elif tabs == 'Data and visualizations':
     fig = px.box(
         df, 
         x="Year", 
-        y="Revenue",
-        color = green)
+        y="Revenue")
     fig.show()
 
     tab1, tab2 = st.tabs(["Box Plot of Interest Rate from 2009 - 2021", "Graph Description"])
