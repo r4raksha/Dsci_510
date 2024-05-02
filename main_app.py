@@ -60,4 +60,20 @@ elif tabs == 'Data and visualizations':
     with tab2:
         # Use the native Altair theme.
         st.altair_chart(chart, theme=None, use_container_width=True)
+        
+    fig = px.scatter(
+        df,
+        x="Year",
+        y="Interest Rate",
+        size="CPI",
+        color="Month",
+        size_max=60,
+    )
+
+tab1, tab2 = st.tabs(["Streamlit theme (default)", "Plotly native theme"])
+with tab1:
+    # Use the Streamlit theme.
+    # This is the default. So you can also omit the theme argument.
+    st.plotly_chart(fig, theme="streamlit", use_container_width=True)
+
     
