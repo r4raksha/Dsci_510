@@ -49,21 +49,6 @@ elif tabs == 'Data and visualizations':
         st.subheader('Filtered Data')
         st.write(filtered_df)
 
-    xmin = 2005
-    xmax = 2022
-    ymin = df['CPI'].min()  # You can adjust these values based on your data
-    ymax = df['CPI'].max()
-
-    chart = alt.Chart(df).mark_circle().encode(
-        x='Year',
-        y='CPI',
-    ).interactive()
-
-    chart = chart.configure_scale(
-        x=alt.Scale(domain=[xmin, xmax]),
-        y=alt.Scale(domain=[ymin, ymax])
-    )
-
     tab1, tab2 = st.columns(2)
     with tab1:
         st.altair_chart(chart, use_container_width=True)
@@ -84,8 +69,5 @@ elif tabs == 'Data and visualizations':
         st.plotly_chart(fig, use_container_width=True)
     with tab2:
         st.markdown("Graph Description: Plotting CPI, Interest Rate, Month, and Year")
-
-    fig = px.line(filtered_df, x='Year', y='lifeExp', color='country', markers=True)
-    st.plotly_chart(fig, use_container_width=True)
 
     
