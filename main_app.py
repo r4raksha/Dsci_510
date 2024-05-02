@@ -10,9 +10,9 @@ file_path = 'merged1.csv'  # Adjust the file path to your CSV file
 df = load_data(file_path)
 
 # Sidebar widgets
-#start_year = st.sidebar.selectbox('Select Start Year', df['Year'].unique())
-#end_year = st.sidebar.selectbox('Select End Year', df['Year'].unique())
-#show_data = st.sidebar.checkbox('Show Data')
+start_year = st.sidebar.selectbox('Select Start Year', df['Year'].unique())
+end_year = st.sidebar.selectbox('Select End Year', df['Year'].unique())
+show_data = st.sidebar.checkbox('Show Data')
 
 # Main layout
 main_tab, research_questions, data_sources, data_vis = st.columns(4)
