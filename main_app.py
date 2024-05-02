@@ -6,7 +6,7 @@ import pandas as pd
 def load_data(file_path):
     return pd.read_csv(file_path)
 
-file_path = 'long_term_interest_rate_data.csv'  # Adjust the file path to your CSV file
+file_path = 'merged1.csv'  # Adjust the file path to your CSV file
 df = load_data(file_path)
 
 # Sidebar widgets
