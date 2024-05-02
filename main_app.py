@@ -58,10 +58,10 @@ elif tabs == 'Data and visualizations':
         size_max=20,
     )
 
-    tab1, tab2 = st.columns(2)
+    tab1, tab2 = st.tabs(["Plotting CPI, Interest Rate, Month, and Year", "Graph Description"])
     with tab1:
         st.plotly_chart(fig, use_container_width=True)
     with tab2:
-        st.markdown("Graph Description: Plotting CPI, Interest Rate, Month, and Year")
+        st.markdown("Graph Description")
 
     
