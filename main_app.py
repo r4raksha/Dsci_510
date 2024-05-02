@@ -54,7 +54,7 @@ elif tabs == 'Data and visualizations':
         y='CPI',
     ).interactive()
 
-    tab1, tab2 = st.tabs(["CPI over the Years", "Graph Description"])
+    tab1, tab2 = st.tabs(["CPI (Consumer Price Index) over the Years", "Graph Description"])
     with tab1:
         st.altair_chart(chart, theme=None, use_container_width=True)
     with tab2:
