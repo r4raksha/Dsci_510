@@ -1,6 +1,7 @@
 import pandas as pd
 import streamlit as st 
 import altair as alt
+import plotly.express as px
 
 @st.cache_data
 def load_data(file_path):
@@ -54,11 +55,9 @@ elif tabs == 'Data and visualizations':
     ).interactive()
 
     tab1, tab2 = st.columns(2)
-
     with tab1:
-        # Use the Streamlit theme.
-        # This is the default. So you can also omit the theme argument.
-        st.altair_chart(chart, theme="streamlit", use_container_width=True)
+        st.markdown("This visualization shows how Consumer Price Index is around the same range throughout each month. My follow-up question to this was observing the years and seeing overall impact during the recession years.")
     with tab2:
         # Use the native Altair theme.
         st.altair_chart(chart, theme=None, use_container_width=True)
+    
