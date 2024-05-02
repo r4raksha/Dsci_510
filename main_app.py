@@ -30,13 +30,22 @@ if tabs == 'Introduction':
     
 elif tabs == 'Research Questions':
     st.title("Research Questions")
-    st.write('This is the Research Questions tab.')
+    st.write('These research questions address the progress of my project:')
+
+    st.markdown("1. What I set out to study (the point of my project): ")
+    st.markdown("2. What I discovered from my project: ")
+    st.markdown("3. Difficulties I had in completing my project: ")
+    st.markdown("4. Skills I wish I had while doing the project: ")
+    st.markdown("5. Future steps to expand/augment my project: ")
+    
 elif tabs == 'Data Sources': 
     st.title("Data Sources")
     st.write('This is the Data Sources tab.')
+    
 elif tabs == 'Data and visualizations':
     st.title("Data and Visualizations")
-    st.write('This is the Data Visualization tab.')
+    st.write('The following tabs display my visualizations and final observations on the project. There is also interactivity on the sidebar to filter data for groups of interest on the dataset I used for the project. Adjust the start and end of the month and year and click "Show Data" to invoke interactivity.')
+    
     start_year = st.sidebar.selectbox('Select Start Year', df['Year'].unique())
     end_year = st.sidebar.selectbox('Select End Year', df['Year'].unique())
     start_month = st.sidebar.selectbox('Select Start Month', df['Month'].unique())
