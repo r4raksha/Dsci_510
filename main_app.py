@@ -19,7 +19,7 @@ if tabs == 'Introduction':
     st.markdown("My webapp contains the following four pages: Introduction, Research Questions, Dataframe, and Data and Visualizations.
 To navigate my webapp, begin at the Introduction! This page is an overview of takeaways from my plots, tables, and its interactivity as well as my conclusions from the visualizations. I also reflected on the project findings and process on this page. 
 The second page contains more in-depth reflection questions which have a few explanations as to what I discovered, challenges, skills I wish I had for the project, and future direction and steps.
-Next, on the Dataframe page, I listed all three sources and described how I acquired the datasets for my project, from web scraping the FRED website to utilizing the stock market and interest rate API’s.)
+Next, on the Dataframe page, I listed all three sources and described how I acquired the datasets for my project, from web scraping the FRED website to utilizing the stock market and interest rate API’s.")
     
 elif tabs == 'Research Questions':
     st.title("Research Questions")
