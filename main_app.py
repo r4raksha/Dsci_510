@@ -46,7 +46,7 @@ elif tabs == 'Data Sources':
 
 elif tabs == 'Data and visualizations':
     st.title("Data and Visualizations")
-    st.write('The following tabs display my visualizations and final observations on the project. There is also interactivity on the sidebar to filter data for groups of interest on the dataset I used for the project. Adjust the start and end of the month and year and click "Show Data" to invoke interactivity.')
+    st.write('The following tabs display my visualizations and final observations on the project. Hovering over each data point is possible to identify specific values in the visualization. There is also interactivity on the sidebar to filter data for groups of interest on the dataset I used for the project. Adjust the start and end of the month and year and click "Show Data" to invoke interactivity.')
     
     start_year = st.sidebar.selectbox('Select Start Year', df['Year'].unique())
     end_year = st.sidebar.selectbox('Select End Year', df['Year'].unique())
@@ -92,6 +92,11 @@ elif tabs == 'Data and visualizations':
         st.plotly_chart(fig, use_container_width=True)
     with tab2:
         st.markdown("Graph Description")
+
+    fig = px.bar(df, x='Year', y='Return (%)',
+             hover_data=['Year', 'Return (%)'], color='lifeExp',
+             labels={'pop':'population of Canada'}, height=400)
+fig.show()
 
     fig = px.scatter(
         df, 
