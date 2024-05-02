@@ -55,7 +55,7 @@ elif tabs == 'Data and visualizations':
     chart = alt.Chart(df).mark_circle().encode(
         x='Year',
         y='CPI',
-        update_yaxes(range=[ymin, ymax])
+        update_yaxes(range=[ymin, ymax]),
     ).interactive()
 
     chart = chart.configure_scale(
