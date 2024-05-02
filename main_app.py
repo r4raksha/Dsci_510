@@ -12,17 +12,6 @@ st.sidebar.info("DSCI 510 Final Project")
 
 # Main layout
 tabs = st.sidebar.radio('Navigation', ['Introduction', 'Research Questions', 'Data Sources', 'Data and visualizations'])
-
-if tabs == 'Introduction':
-    st.title("Introduction")    
-    st.subheader("Name: Raksha Ravichandran")
-    st.markdown('''
-<style>
-[data-testid="stMarkdownContainer"] ul{
-    padding-left:40px;
-}
-</style>
-''', unsafe_allow_html=True)
     st.markdown("My webapp contains the following four pages: Introduction, Research Questions, Dataframe, and Data and Visualizations.")
     st.markdown("\t     I. To navigate my webapp, begin at the Introduction! This page is an overview of takeaways from my plots, tables, and its interactivity as well as my conclusions from the visualizations. I also reflected on the project findings and process on this page.") 
     st.markdown("\t    II. The second page contains more in-depth reflection questions which have a few explanations as to what I discovered, challenges, skills I wish I had for the project, and future direction and steps.")
