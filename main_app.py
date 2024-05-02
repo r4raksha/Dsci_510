@@ -42,7 +42,7 @@ elif tabs == 'Data Sources':
     st.write("Q4: Briefly (4-6 sentence) describe how you might combine these datasets (i.e. how do they relate to each other?  What are the commonalities between them?  How might you connect them?  How do they enrich each other?). For example, if you scraped census data that contains a person’s “home town”, google maps API data, and data with median income per zip code, you might discuss how you would use the google maps API to translate the hometown to a particular zip code, and then combine that with the income data.")  
     st.write("G5: Briefly (4-6 sentence) describe what you might hope to find in the data overall.  Basically, what are you trying to accomplish in this research project?  What relationship are you trying to explore, or what pattern are you trying to discover, etc.")
 
-elif tabs == 'Data and visualizations':
+elif tabs == 'Data and Visualizations':
     st.title("Data and Visualizations")
     st.write('The following tabs display my visualizations and final observations on the project. Hovering over each data point is possible to identify specific values in the visualization. There is also interactivity on the sidebar to filter data for groups of interest on the dataset I used for the project. Adjust the start and end of the month and year and click "Show Data" to invoke interactivity.')
     
