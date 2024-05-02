@@ -49,7 +49,7 @@ elif tabs == 'Data and visualizations':
         st.write(filtered_df)
 
     chart = alt.Chart(df).mark_circle().encode(
-        x='Year',
+        x='Month',
         y='Interest Rate',
     ).interactive()
 
