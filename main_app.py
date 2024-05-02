@@ -8,7 +8,7 @@ def load_data(file_path):
 file_path = 'merged1.csv'  # Adjust the file path to your CSV file
 df = load_data(file_path)
 
-st.sidebar.info("DSCI 510 Final Project: ")
+st.sidebar.info("DSCI 510 Final Project")
 
 # Main layout
 tabs = st.sidebar.radio('Navigation', ['Introduction', 'Research Questions', 'Data Sources', 'Data and visualizations'])
