@@ -30,8 +30,6 @@ if tabs == 'Introduction':
     
 elif tabs == 'Research Questions':
     st.title("Research Questions")
-    st.write('The points below reflect on the progress of my project:')
-
     st.markdown("**1. What I set out to study (the point of my project):**")
     st.markdown("**2. What I discovered from my project:**")
     st.markdown("**3. Difficulties I had in completing my project:**")
