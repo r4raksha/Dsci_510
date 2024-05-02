@@ -51,20 +51,22 @@ elif tabs == 'Data and visualizations':
 
     xmin = 2005
     xmax = 2022
+    ymin = df['CPI'].min()  # You can adjust these values based on your data
+    ymax = df['CPI'].max()
 
     chart = alt.Chart(df).mark_circle().encode(
         x='Year',
         y='CPI',
-        update_yaxes(range=[ymin, ymax]),
     ).interactive()
 
     chart = chart.configure_scale(
-        x=alt.Scale(domain=[xmin, xmax])
+        x=alt.Scale(domain=[xmin, xmax]),
+        y=alt.Scale(domain=[ymin, ymax])
     )
 
-    tab1, tab2 = st.tabs(["CPI (Consumer Price Index) over the Years", "Graph Description"])
+    tab1, tab2 = st.columns(2)
     with tab1:
-        st.altair_chart(chart, theme = None, use_container_width=True)
+        st.altair_chart(chart, use_container_width=True)
     with tab2:
         st.markdown("This visualization shows how Consumer Price Index is around the same range throughout each month. My follow-up question to this was observing the years and seeing overall impact during the recession years.")
 
@@ -77,13 +79,13 @@ elif tabs == 'Data and visualizations':
         size_max=20,
     )
 
-    tab1, tab2 = st.tabs(["Plotting CPI, Interest Rate, Month, and Year", "Graph Description"])
+    tab1, tab2 = st.columns(2)
     with tab1:
-        st.plotly_chart(fig, theme="streamlit", use_container_width=True)
+        st.plotly_chart(fig, use_container_width=True)
     with tab2:
-        st.markdown("Graph Description")
+        st.markdown("Graph Description: Plotting CPI, Interest Rate, Month, and Year")
 
     fig = px.line(filtered_df, x='Year', y='lifeExp', color='country', markers=True)
-    fig.show()
+    st.plotly_chart(fig, use_container_width=True)
 
     
