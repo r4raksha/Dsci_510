@@ -2,7 +2,7 @@ import streamlit as st
 import pandas as pd
 
 # Uncomment to load data
-@st.cache # This line caches the function result
+@st.cache_data # This line caches the function result
 def load_data(file_path):
     return pd.read_csv(file_path)
 
