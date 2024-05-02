@@ -93,13 +93,13 @@ elif tabs == 'Data and visualizations':
     with tab2:
         st.markdown("Graph Description")
 
-    fig = px.box(
+    fig = px.scatter(
         df, 
         x="Year", 
         y="Revenue")
     fig.show()
 
-    tab1, tab2 = st.tabs(["Box Plot of Interest Rate from 2009 - 2021", "Graph Description"])
+    tab1, tab2 = st.tabs(["Scatter Plot of Interest Rate from 2009 - 2021", "Graph Description"])
     with tab1:
         st.plotly_chart(fig, use_container_width=True)
     with tab2:
