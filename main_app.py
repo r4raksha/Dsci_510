@@ -10,14 +10,12 @@ df = load_data(file_path)
 
 st.sidebar.info("DSCI 510 Final Project: ")
 
-st.title("**Raksha Ravichandran**")
-
 # Main layout
 tabs = st.sidebar.radio('Navigation', ['Introduction', 'Research Questions', 'Data Sources', 'Data and visualizations'])
 
 if tabs == 'Introduction':
     st.title("Introduction")
-    st.write('This is the Introduction tab.')
+    st.write('Name: Raksha Ravichandran')
 elif tabs == 'Research Questions':
     st.title("Research Questions")
     st.write('This is the Research Questions tab.')
