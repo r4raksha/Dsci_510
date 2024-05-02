@@ -1,3 +1,5 @@
+pip freeze > requirements.txt
+
 import streamlit as st
 import pandas as pd
 pip install matplotlib
