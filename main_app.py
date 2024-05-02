@@ -18,7 +18,7 @@ tabs = st.sidebar.radio('Navigation', ['Introduction', 'Research Questions', 'Da
 if tabs == 'Introduction':
     st.title("Introduction")    
     st.subheader("Name: Raksha Ravichandran")
-    st.markdown("My webapp contains the following four pages: I. Introduction, II. Research Questions, III. Dataframe, and IV. Data and Visualizations.")
+    st.markdown("My webapp contains the following four pages: **I. Introduction, II. Research Questions, III. Dataframe, and IV. Data and Visualizations.**")
     st.markdown("\t     I. To navigate my webapp, begin at the Introduction! This page is an overview of takeaways from my plots, tables, and its interactivity as well as my conclusions from the visualizations. I also reflected on the project findings and process on this page.") 
     st.markdown("\t    II. The second page contains more in-depth reflection questions which have a few explanations as to what I discovered, challenges, skills I wish I had for the project, and future direction and steps.")
     st.markdown("\t   III. Next, on the Dataframe page, I listed all three sources and described how I acquired the datasets for my project, from web scraping the FRED website to utilizing the stock market and interest rate API’s.")
@@ -30,18 +30,20 @@ if tabs == 'Introduction':
     
 elif tabs == 'Research Questions':
     st.title("Research Questions")
-    st.write('These research questions address the progress of my project:')
+    st.write('The points below reflect on the progress of my project:')
 
-    st.markdown("1. What I set out to study (the point of my project): ")
-    st.markdown("2. What I discovered from my project: ")
-    st.markdown("3. Difficulties I had in completing my project: ")
-    st.markdown("4. Skills I wish I had while doing the project: ")
-    st.markdown("5. Future steps to expand/augment my project: ")
+    st.markdown("**1. What I set out to study (the point of my project): **")
+    st.markdown("**2. What I discovered from my project: **")
+    st.markdown("**3. Difficulties I had in completing my project: **")
+    st.markdown("**4. Skills I wish I had while doing the project: **")
+    st.markdown("**5. Future steps to expand/augment my project: **")
     
 elif tabs == 'Data Sources': 
     st.title("Data Sources")
-    st.write('This is the Data Sources tab.')
-    
+    st.write("Brief description of data/API (what it contains, what it represents, etc.):")
+    st.write("Q4: Briefly (4-6 sentence) describe how you might combine these datasets (i.e. how do they relate to each other?  What are the commonalities between them?  How might you connect them?  How do they enrich each other?). For example, if you scraped census data that contains a person’s “home town”, google maps API data, and data with median income per zip code, you might discuss how you would use the google maps API to translate the hometown to a particular zip code, and then combine that with the income data.")  
+    st.write("G5: Briefly (4-6 sentence) describe what you might hope to find in the data overall.  Basically, what are you trying to accomplish in this research project?  What relationship are you trying to explore, or what pattern are you trying to discover, etc.")
+
 elif tabs == 'Data and visualizations':
     st.title("Data and Visualizations")
     st.write('The following tabs display my visualizations and final observations on the project. There is also interactivity on the sidebar to filter data for groups of interest on the dataset I used for the project. Adjust the start and end of the month and year and click "Show Data" to invoke interactivity.')
