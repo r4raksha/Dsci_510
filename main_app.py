@@ -32,11 +32,11 @@ elif tabs == 'Research Questions':
     st.title("Research Questions")
     st.write('The points below reflect on the progress of my project:')
 
-    st.markdown("**1. What I set out to study (the point of my project): **")
-    st.markdown("**2. What I discovered from my project: **")
-    st.markdown("**3. Difficulties I had in completing my project: **")
-    st.markdown("**4. Skills I wish I had while doing the project: **")
-    st.markdown("**5. Future steps to expand/augment my project: **")
+    st.markdown("**1. What I set out to study (the point of my project):**")
+    st.markdown("**2. What I discovered from my project:**")
+    st.markdown("**3. Difficulties I had in completing my project:**")
+    st.markdown("**4. Skills I wish I had while doing the project:**")
+    st.markdown("**5. Future steps to expand/augment my project:**")
     
 elif tabs == 'Data Sources': 
     st.title("Data Sources")
