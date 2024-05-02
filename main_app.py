@@ -49,14 +49,22 @@ elif tabs == 'Data and visualizations':
         st.subheader('Filtered Data')
         st.write(filtered_df)
 
+    xmin = 2005
+    xmax = 2022
+
     chart = alt.Chart(df).mark_circle().encode(
         x='Year',
         y='CPI',
+        update_yaxes(range=[ymin, ymax])
     ).interactive()
+
+    chart = chart.configure_scale(
+        x=alt.Scale(domain=[xmin, xmax])
+    )
 
     tab1, tab2 = st.tabs(["CPI (Consumer Price Index) over the Years", "Graph Description"])
     with tab1:
-        st.altair_chart(chart, theme=None, use_container_width=True)
+        st.altair_chart(chart, use_container_width=True)
     with tab2:
         st.markdown("This visualization shows how Consumer Price Index is around the same range throughout each month. My follow-up question to this was observing the years and seeing overall impact during the recession years.")
 
