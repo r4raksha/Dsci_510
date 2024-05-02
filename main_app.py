@@ -1,7 +1,6 @@
 
 import streamlit as st
 import pandas as pd
-pip install matplotlib
 import matplotlib.pyplot as plt
 
 df = pd.read_csv('car_data.csv')
