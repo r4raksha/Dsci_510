@@ -94,14 +94,10 @@ elif tabs == 'Data and visualizations':
         st.markdown("Graph Description")
 
     fig = px.bar(df, x='Year', y='Return (%)',
-             hover_data=['Year', 'Return (%)'], color='lifeExp',
-             labels={'pop':'population of Canada'}, height=400)
-fig.show()
-
-    fig = px.scatter(
-        df, 
-        x="Year", 
-        y="Return (%)")
+             hover_data=['Year', 'Return (%)'], 
+             #color='lifeExp',
+             #labels={'pop':'population of Canada'}, 
+             height=400)
     fig.show()
 
     tab1, tab2 = st.tabs(["Scatter Plot of American Tower Revenue from 2009 - 2021", "Graph Description"])
