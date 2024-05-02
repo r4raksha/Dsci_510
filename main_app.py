@@ -9,6 +9,8 @@ def load_data(file_path):
 file_path = 'merged1.csv'  # Adjust the file path to your CSV file
 df = load_data(file_path)
 
+st.sidebar.info("Raksha's Data 510 Project: Stock Market, Interest Rates, and Real Estate Revenue During Economic Recessions")
+
 # Sidebar widgets
 start_year = st.sidebar.selectbox('Select Start Year', df['Year'].unique())
 end_year = st.sidebar.selectbox('Select End Year', df['Year'].unique())
