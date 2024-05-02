@@ -48,10 +48,9 @@ elif tabs == 'Data and visualizations':
         st.subheader('Filtered Data')
         st.write(filtered_df)
 
-    chart = alt.Chart(filtered_df).mark_circle().encode(
-        x=df['Year'],
-        y=df['Interest Rate'],
-        color=df['Month'],
+    chart = alt.Chart(df).mark_circle().encode(
+        x='Year',
+        y='Interest Rate',
     ).interactive()
 
     tab1, tab2 = st.columns(2)
