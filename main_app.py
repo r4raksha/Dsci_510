@@ -18,7 +18,7 @@ tabs = st.sidebar.radio('Navigation', ['Introduction', 'Research Questions', 'Da
 if tabs == 'Introduction':
     st.title("Introduction")    
     st.subheader("Name: Raksha Ravichandran")
-    st.markdown("My webapp contains the following four pages: Introduction, Research Questions, Dataframe, and Data and Visualizations.")
+    st.markdown("My webapp contains the following four pages: I. Introduction, II. Research Questions, III. Dataframe, and IV. Data and Visualizations.")
     st.markdown("\t     I. To navigate my webapp, begin at the Introduction! This page is an overview of takeaways from my plots, tables, and its interactivity as well as my conclusions from the visualizations. I also reflected on the project findings and process on this page.") 
     st.markdown("\t    II. The second page contains more in-depth reflection questions which have a few explanations as to what I discovered, challenges, skills I wish I had for the project, and future direction and steps.")
     st.markdown("\t   III. Next, on the Dataframe page, I listed all three sources and described how I acquired the datasets for my project, from web scraping the FRED website to utilizing the stock market and interest rate API’s.")
@@ -26,7 +26,7 @@ if tabs == 'Introduction':
 
     st.markdown("**Plots/Charts**")
     st.markdown("**Conclusions**")
-    st.markdonw("**Major Gotchas**")
+    st.markdown("**Major Gotchas**")
     
 elif tabs == 'Research Questions':
     st.title("Research Questions")
