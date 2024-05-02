@@ -13,7 +13,7 @@ df = load_data(file_path)
 st.sidebar.info("DSCI 510 Final Project")
 
 # Main layout
-tabs = st.sidebar.radio('Navigation', ['Introduction', 'Research Questions', 'Data Sources', 'Data and visualizations'])
+tabs = st.sidebar.radio('Navigation', ['Introduction', 'Research Questions', 'Data Sources', 'Data and Visualizations'])
 
 if tabs == 'Introduction':
     st.title("Introduction")    
