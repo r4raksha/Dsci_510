@@ -99,7 +99,7 @@ elif tabs == 'Data and visualizations':
         y="Revenue")
     fig.show()
 
-    tab1, tab2 = st.tabs(["Scatter Plot of Interest Rate from 2009 - 2021", "Graph Description"])
+    tab1, tab2 = st.tabs(["Scatter Plot of American Tower Revenue from 2009 - 2021", "Graph Description"])
     with tab1:
         st.plotly_chart(fig, use_container_width=True)
     with tab2:
