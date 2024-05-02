@@ -67,7 +67,7 @@ elif tabs == 'Data and visualizations':
         y="Interest Rate",
         size="CPI",
         color="Month",
-        size_max=60,
+        size_max=20,
     )
 
 tab1, tab2 = st.tabs(["Streamlit theme (default)", "Plotly native theme"])
