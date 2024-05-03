@@ -18,19 +18,20 @@ tabs = st.sidebar.radio('Navigation', ['Introduction', 'Research Questions', 'Da
 if tabs == 'Introduction':
     st.title("Introduction")    
     st.subheader("Name: Raksha Ravichandran")
-    st.markdown("My webapp contains the following four pages: ** Introduction, Research Questions, Dataframe, and Data and Visualizations.**")
+    st.markdown("My webapp contains the following four pages: **Introduction, Research Questions, Dataframe, and Data and Visualizations.**")
     st.markdown("1) To navigate my webapp, begin at the Introduction! This page is an overview of takeaways from my plots, tables, and its interactivity as well as my conclusions from the visualizations. I also reflected on the project findings and process on this page.") 
     st.markdown("2) The second page contains more in-depth reflection questions which have a few explanations as to what I discovered, challenges, skills I wish I had for the project, and future direction and steps.")
     st.markdown("3) Next, on the Dataframe page, I listed all three sources and described how I acquired the datasets for my project, from web scraping the FRED website to utilizing the stock market and interest rate API’s.")
     st.markdown("4) The final page shows each visualization I’ve made and their interactivity from the datasets!")
 
     st.markdown("**Plots/Charts**")
-    st.markdown("Plotting CPI, Interest Rate, Month, and Year:")
-    st.markdown("For my first plot, I looked at the relationship of the key parameters, CPI and mainly interest rate, and its relation to the years of 2009 to 2021. CPI is obtained from officialdata.org/us/stocks and interest rate from macrotrends.net. This graph is used to identify interest rate trends in the economy.")
-    st.markdown("For my second plot, I observed the correlation of the revenue of the top grossing real estate investment trust (REIT) to the years of 2009 to 2021.")
-    st.markdown("For my third plot, I found how many times a certain percentage value of return rate appeared by displaying its count as an x-value and using the hovertemplate to display the return rate's year.")
-    st.markdown("For my fourth plot, I combined all three factors, CPI, REIT revenue, interest rate, and its association to stock performance (return rate percentage).")
+    st.markdown("Scatter Plot of Interest Rate and CPI: For my first plot, I looked at the relationship of the key parameters, CPI and mainly interest rate, and its relation to the years of 2009 to 2021. CPI is obtained from officialdata.org/us/stocks and the interest rate from FRED API. The values can be interpreted as the end of each month (December), as shown as yellow in the legend and hover display. Overall, this graph is used to identify interest rate trends in the economy.")
+    st.markdown("Line Graph of American Tower Revenue: For this second visualization, I observed the correlation of the revenue of the top grossing real estate investment trust (REIT) to the years of 2009 to 2021. This is webscraped from the macrotrend.net website and depicts the various months using the toggle to display each month's change in revenue. This graph displays the revenue of American Tower (AMT), obtained from macrotrends.net.")  
+    st.markdown("Bar Plot for Return Rate: For my third graph, I found how many times a specific percentage value of return rate appeared by displaying its count as an x-value and using the hovertemplate to display the return rate's year as the y-value. Return Rate Percentage represents the stock performance, whether it declines or grows in value, and is webscraped from officialdata.org/us/stocks.
+    st.markdown("Plotting CPI, Interest Rate, REIT revenue: I plotted all three factors, CPI, REIT revenue, interest rate and its association to stock performance (return rate percentage). This portrays the relationships with emphasis on the years of recession around 2009 and 2021.")
+    
     st.markdown("**Conclusions**")
+                
     st.markdown("**Major Gotchas**")
     
 elif tabs == 'Research Questions':
@@ -115,6 +116,9 @@ elif tabs == 'Data and Visualizations':
         st.plotly_chart(fig, use_container_width=True)
     with tab2:
         st.markdown("Graph Description")
+
+
+    
     
 
     
