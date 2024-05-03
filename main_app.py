@@ -118,10 +118,10 @@ elif tabs == 'Data and Visualizations':
         st.markdown("Graph Description")
 
     # visualization 4
-    fig = px.line(df, x= 'Year', y= 'Revenue'
+    fig = px.line(df, x= 'Year', y= 'Revenue')
 
     # Add Scatter plot
-    fig.add_scatter(x= 'Year', y= 'Return (%)'
+    fig.add_scatter(x= 'Year', y= 'Return (%)')
         fig.show()
 
     tab1, tab2 = st.tabs(["Revenue", "Return Rate"])
