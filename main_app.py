@@ -122,7 +122,6 @@ elif tabs == 'Data and Visualizations':
         st.plotly_chart(fig, use_container_width=True)
     with tab2:
         st.markdown("Graph Description")
-
     
     df_melt = df.melt(id_vars='Year', value_vars=['Revenue', 'Interest Rate', 'CPI', 'Return (%)'])
     fig = px.line(df_melt, x='Year' , y='value' , color='variable')
