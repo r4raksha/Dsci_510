@@ -119,7 +119,7 @@ elif tabs == 'Data and Visualizations':
 
     fig = px.scatter(df,
                      x='Year', 
-                     y='Return (%)', 
+                     y='Revenue', 
                      size='Interest Rate', 
                      color='CPI', 
                      title='Scatter Plot with Four Variables',
