@@ -25,16 +25,29 @@ if tabs == 'Introduction':
     st.markdown("\t    IV. The final page shows each visualization I’ve made and their interactivity from the datasets!")
 
     st.markdown("**Plots/Charts**")
+    st.markdown("For my first plot, I looked at the relationship of the key paramters, CPI and mainly interest rate, and its relation to the years of 2009 to 2021. This graph is used to identify interest rate trends in the economy.")
+    st.markdown("For my second plot, I observed the correlation of the revenue of the top grossing real estate investment trust (REIT) to the years of 2009 to 2021.")
+    st.markdown("For my third plot, I found how many times a certain percentage value of return rate appeared by displaying its count as an x-value and using the hovertemplate to display the return rate's year.")
+    st.markdown("For my fourth plot, I combined all three factors, CPI, REIT revenue, interest rate, and its association to stock performance (return rate percentage).")
     st.markdown("**Conclusions**")
     st.markdown("**Major Gotchas**")
     
 elif tabs == 'Research Questions':
     st.title("Research Questions")
     st.markdown("**1. What I set out to study (the point of my project):**")
+    st.markdown("The main goal of my project is to find how the revenue of major real estate companies with stocks in the United States (which are known as real estate investment trusts) correlate to stock performance over the years. I also was interested to see how interest rates affected the stock performance, as an indicator of decline or growth. The years of interest were 2009 after the recession and 2021 after the COVID-19 pandemic since these years showed significant decline in the stock market, and are valuable benchmarks for overall housing market trends.")
+
     st.markdown("**2. What I discovered from my project:**")
+    st.markdown("I discovered that are similarities between interest rates' growth and decline and consumer price index. I was not able to make strong conclusions on the housing market, however, since I used only one source of revenue from one REIT and should test more REITs in future steps.")
+    
     st.markdown("**3. Difficulties I had in completing my project:**")
+    st.markdown("Finding websites that were API-accessible for both my initial project plan and my final submission was challenging. It was also difficult for me to combine all the datasets I wanted to merge into one. Github would not allow me to upload large files, so I had to narrow it down from short-term interest rate and the other 4 top grossing REITs to just long-term interest rate and highest grossing REIT for revenue.")
+    
     st.markdown("**4. Skills I wish I had while doing the project:**")
+    st.markdown("It was challenging to deploy streamlit, especially with not understanding the requirements.txt and getting used to its features. I had a hard time just getting started from scratch on my webapp, so I would've liked to have greater expertise in this area of the project.")
+    
     st.markdown("**5. Future steps to expand/augment my project:**")
+    st.markdown("Some future steps I would use to expand my project are combining the datasets which I had to remove for my final submission, such as merging more REITs and other factors on stock performance which contribute to the housing stock market, such as short term interest or even mortgage rates.")
     
 elif tabs == 'Data Sources': 
     st.title("Data Sources")
@@ -93,9 +106,7 @@ elif tabs == 'Data and Visualizations':
 
     fig = px.bar(df, x='Year', y='Return (%)',
              hover_data=['Year', 'Return (%)'], 
-             #color='lifeExp',
-             #labels={'pop':'population of Canada'}, 
-             height=400)
+             height=200)
     fig.show()
 
     tab1, tab2 = st.tabs(["Bar Plot of Return Rate over the Years", "Graph Description"])
