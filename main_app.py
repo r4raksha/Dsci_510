@@ -119,7 +119,7 @@ elif tabs == 'Data and Visualizations':
 
     
     df_melt = df.melt(id_vars='Year', value_vars=['Revenue', 'Return (%)'])
-    px.line(df_melt, x='Year' , y='value' , color='variable')
+    fig = px.line(df_melt, x='Year' , y='value' , color='variable')
 
     st.plotly_chart(fig, use_container_width=True)
 
