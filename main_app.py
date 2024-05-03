@@ -117,6 +117,18 @@ elif tabs == 'Data and Visualizations':
     with tab2:
         st.markdown("Graph Description")
 
+    fig = px.scatter(df,
+                     x='Revenue', 
+                     y='Return Rate', 
+                     size='Interest Rate', 
+                     color='CPI', 
+                     title='Scatter Plot with Four Variables',
+                     labels={'x': 'American Tower Real Estate Revenu', 'y': 'Stock Market Performance Return Rate Percentage'},  # Custom axis labels
+                 h    over_data={'size': True, 'color': True})  # Additional hover info
+
+    # Show plot
+    fig.show()
+
 
     
     
