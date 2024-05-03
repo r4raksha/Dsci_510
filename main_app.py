@@ -106,7 +106,7 @@ elif tabs == 'Data and Visualizations':
 
     fig = px.bar(df, x='Year', y='Return (%)',
              hover_data=['Year', 'Return (%)'], 
-             height=200)
+             height=500)
     fig.show()
 
     tab1, tab2 = st.tabs(["Bar Plot of Return Rate over the Years", "Graph Description"])
