@@ -31,8 +31,11 @@ if tabs == 'Introduction':
     st.markdown("Plotting CPI, Interest Rate, REIT revenue: I plotted all three factors, CPI, REIT revenue, interest rate and its association to stock performance (return rate percentage). This portrays the relationships with emphasis on the years of recession around 2009 and 2021.")
     
     st.markdown("**Conclusions**")
-                
+    st.markdown("From the plots, I found that the major REIT, American Tower Revenue, was not affected by long term interest rates, and the visualizations also suggest that there are other factors, not soley CPI and overall stock market return percentage, which affect the growth of this American Tower stock and the company's revenue. The next page on Research Questions explains this phenomona in further detail.")
+        
     st.markdown("**Major Gotchas**")
+    st.markdown("The dataset is very large, so the initial deployment on Github and Streamlit Cloud takes a long time. Also, CPI and Return (%) are comparatively very small numbers to American Tower Revenue and Interest Rate, making the numbers difficult to see in the last plot of my Data and Visualizations page. Relying on the hovertemplate with its associated values is necessary for this page.")
+
     
 elif tabs == 'Research Questions':
     st.title("Research Questions")
@@ -46,13 +49,13 @@ elif tabs == 'Research Questions':
     st.markdown("I discovered that there is a weak, but positive correlation between stock market performance growth and consumer price index increase, and vice versa. There is also correlation between the stock market peformance growth and long-term interest rates. However, I could not draw many conclusions from the housing market and stock market return percentage.")
     
     st.markdown("**3. Difficulties I had in completing my project:**")
-    st.markdown("Finding websites that were API-accessible for both my initial project plan and my final submission was challenging. It was also difficult for me to combine all the datasets I wanted to merge into one. Github would not allow me to upload large files, so I had to narrow it down from short-term interest rate and the other 4 top grossing REITs to soley long-term interest rate and highest grossing REIT for revenue, making my dataset less robust.")
+    st.markdown("Finding websites that were API-accessible for both my initial project plan and my final submission was challenging. It was also difficult for me to combine all the datasets I wanted to merge into one.  GitHub's limitations on file size reduced the scope of my dataset, leading to a less comprehensive analysis. I had to narrow it down from short-term interest rate and the other 4 top grossing REITs to soley long-term interest rate and highest grossing REIT for revenue.")
     
     st.markdown("**4. Skills I wish I had while doing the project:**")
     st.markdown("It was challenging to deploy streamlit, especially with not understanding the requirements.txt and getting used to its features. I had a difficult time just getting started from scratch on my webapp, so I would've liked to have greater expertise in this area of the project. I also struggled with the API access with my inital project idea, so I would've liked to gain more knowledge on this aspect when getting started.")
     
     st.markdown("**5. Future steps to expand/augment my project:**")
-    st.markdown("Some future steps I would use to expand my project are combining the datasets which I had to remove for my final submission, such as merging more REITs and other factors on stock performance which contribute to the real estate stock market, such as short term interest rates or even mortgage rates. I would consider conducting further analysis on how strong of a correlation the relationships are with R-squared coefficient and calculating significant difference with analytical T-tests. I was not able to make strong conclusions on the housing market, however, since I used only one source of revenue from one REIT, so I would also test more REITs in future steps.")
+    st.markdown("Some future steps I would use to expand my project are combining the datasets which I had to remove for my final submission, such as merging more REITs and other factors on stock performance which contribute to the real estate stock market, such as short term interest rates or even mortgage rates to make my dataset more robust. I would consider conducting further analysis on how strong of a correlation the relationships are with R-squared coefficient and calculating significant difference with analytical T-tests. I was not able to make strong conclusions on the housing market, however, since I used only one source of revenue from one REIT, so I would also test more REITs in future steps.")
     
 elif tabs == 'Data Sources': 
     st.title("Data Sources")
