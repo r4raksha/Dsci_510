@@ -57,9 +57,9 @@ elif tabs == 'Research Questions':
 elif tabs == 'Data Sources': 
     st.title("Data Sources")
     st.write("Brief Description of Data: My data contains 6 columns and 3,745 rows and was created by merging Interest Rate, Revenue, CPI, Month, Return (%), at the common variable, 'Year'. It contains years ranging from 2009 to 2021. By utilizing this dataset, multi-faceted relationships were discovered by first examining each variable (Consumer Price Index (CPI), Long Term Interest Rate, and American Tower Revenue) over the years, and then comparing overall patterns in relation to stock performance (Return Rate %).")
-    st.markdown("1) API: The API used was from the Federal Reserve Economic Data website. I obtained the dataset from the long-term interest rate federal funds data.")
-    st.markdown("2) Webscraping website: I webscraped the macrotrends.net website for American Tower Revenue, Month, and Year.")
-    st.markdown("3) Webscraping website: I also webscraped the officialdata.org/us/stocks for S&P 500 stocks and derived the Return (%), Month, and Year.")
+    st.markdown("Data Source 1) API: The API used was from the Federal Reserve Economic Data website. I obtained the dataset from the long-term interest rate federal funds data. URL: https://fred.stlouisfed.org/series/IRLTLT01USM156N")
+    st.markdown("Data Source 2) Website: I webscraped the macrotrends.net website for American Tower Revenue, Month, and Year. URL: https://www.macrotrends.net/stocks/charts/AMT/american-tower/revenue")
+    st.markdown("Data Source 3) Website: I also webscraped the officialdata.org/us/stocks for S&P 500 stocks and derived the Return (%), Month, and Year. URL: https://www.officialdata.org/us/stocks/s-p-500")
                 
 elif tabs == 'Data and Visualizations':
     st.title("Data and Visualizations")
