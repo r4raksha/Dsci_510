@@ -117,12 +117,15 @@ elif tabs == 'Data and Visualizations':
     with tab2:
         st.markdown("Graph Description")
 
-    # visualization 4
-    fig = px.line(df, x= 'Year', y= 'Revenue')
+    # Line plot
+    fig = px.line(df, x='Year', y='Revenue', title='Revenue Over Time')
 
-    # Add Scatter plot
-    fig.add_scatter(x= 'Year', y= 'Return (%)')
-        fig.show()
+    # Add scatter plot
+    fig.add_scatter(x=df['Year'], y=df['Return (%)'], mode='markers', name='Return (%)')
+
+    # Show plot
+    st.plotly_chart(fig, use_container_width=True)
+
 
     tab1, tab2 = st.tabs(["Revenue", "Return Rate"])
     with tab1:
