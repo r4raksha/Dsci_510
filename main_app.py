@@ -81,12 +81,11 @@ elif tabs == 'Data and Visualizations':
         df,
         x="Year",
         y="Interest Rate",
-        size="CPI",
         color="Month",
         size_max=20,
     )
 
-    tab1, tab2 = st.tabs(["Plotting CPI, Interest Rate, Month, and Year", "Graph Description"])
+    tab1, tab2 = st.tabs(["Plotting Interest Rate, Month, and Year", "Graph Description"])
     with tab1:
         st.plotly_chart(fig, use_container_width=True)
     with tab2:
@@ -121,7 +120,11 @@ elif tabs == 'Data and Visualizations':
     df_melt = df.melt(id_vars='Year', value_vars=['Revenue', 'Interest Rate', 'CPI', 'Return (%)'])
     fig = px.line(df_melt, x='Year' , y='value' , color='variable')
 
-    st.plotly_chart(fig, use_container_width=True)
+    tab1, tab2 = st.tabs(["Revenue, Interest Rate, CPI, and Return % over the Years", "Graph Description"])
+    with tab1:
+        st.plotly_chart(fig, use_container_width=True)
+    with tab2:
+        st.markdown("Graph Description")
 
 
     
