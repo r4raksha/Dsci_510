@@ -118,7 +118,7 @@ elif tabs == 'Data and Visualizations':
         st.markdown("Graph Description")
 
     fig = px.scatter(df,
-                     x='Revenue', 
+                     x='Year', 
                      y='Return (%)', 
                      size='Interest Rate', 
                      color='CPI', 
