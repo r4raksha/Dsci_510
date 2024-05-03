@@ -121,11 +121,8 @@ elif tabs == 'Data and Visualizations':
     df_melt = df.melt(id_vars='Year', value_vars=['Revenue', 'Return (%)'])
     px.line(df_melt, x='Year' , y='value' , color='variable')
 
-    tab1, tab2 = st.tabs(["Revenue", "Return Rate"])
-        with tab1:
-            st.plotly_chart(fig, use_container_width=True)
-        with tab2:
-            st.markdown("Graph Description")
+    st.plotly_chart(fig, use_container_width=True)
+
 
     
     
