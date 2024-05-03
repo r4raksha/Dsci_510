@@ -117,17 +117,12 @@ elif tabs == 'Data and Visualizations':
     with tab2:
         st.markdown("Graph Description")
 
-    fig = px.scatter(df,
-                     x='Year', 
-                     y='Revenue', 
-                     size='Interest Rate', 
-                     color='CPI', 
-                     title='Scatter Plot with Four Variables',
-                     labels={'x': 'American Tower Real Estate Revenu', 'y': 'Stock Market Performance Return Rate Percentage'},  # Custom axis labels
-                     hover_data={'size': True, 'color': True})  # Additional hover info
+    # visualization 4
+    fig = px.line(df, x= 'Year', y= 'Revenue'
 
-    # Show plot
-    fig.show()
+    # Add Scatter plot
+    fig.add_scatter(x= 'Year', y= 'Return (%)'
+        fig.show()
 
     tab1, tab2 = st.tabs(["Revenue", "Return Rate"])
     with tab1:
