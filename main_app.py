@@ -38,7 +38,11 @@ elif tabs == 'Research Questions':
     st.title("Research Questions")
     st.markdown("**1. What I set out to study (the point of my project):**")
     st.markdown("The main goal of my project is to find how the revenue of major real estate companies with stocks in the United States (which are known as real estate investment trusts) correlate to stock performance over the years. I also was interested to see how interest rates affected the stock performance, as an indicator of decline or growth. The years of interest were 2009 after the recession and 2021 after the COVID-19 pandemic since these years showed significant decline in the stock market, and are valuable benchmarks for overall housing market trends.")
+    st.markdown("My project addresses the following questions:")
+    st.markdown("1) how long-term interest rates affect the stock market (return rate)? It aims to understand how fluctuations in interest rates influence stock market performance? It aims to understand how fluctuations in interest rates influence stock market performance.")
+    st.markdown("2) how does stock performance affect real estate? before and after the years of 2008 (the Great Recession) and 2020 (COVID-19)? This seeks to uncover how changes in stock performance correlate with real estate trends during these periods.")
 
+It seeks to uncover how changes in stock performance correlate with real estate trends during these periods.
     st.markdown("**2. What I discovered from my project:**")
     st.markdown("I discovered that are similarities between interest rates' growth and decline and consumer price index. I was not able to make strong conclusions on the housing market, however, since I used only one source of revenue from one REIT and should test more REITs in future steps.")
     
